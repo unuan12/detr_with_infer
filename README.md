@@ -219,6 +219,13 @@ Non-DC5 models were trained with batch size 2, and DC5 with 1,
 so DC5 models show a significant drop in AP if evaluated with more
 than 1 image per GPU.
 
+## Infer
+To infer DETR R50 model, download pretrained model from model zoo and put model in `ckpt` then run:
+```
+python infer.py --image ./images/test.jpg
+```
+![result](.github/result.png)
+
 ## Multinode training
 Distributed training is available via Slurm and [submitit](https://github.com/facebookincubator/submitit):
 ```
